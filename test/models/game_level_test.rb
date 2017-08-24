@@ -5,8 +5,8 @@ class GameLevelTest < ActiveSupport::TestCase
   #   assert true
   # end
    def setup
-      @user = User.create(name: "User1")
-      @game = Game.create(name: "Game1", user: @user)
+
+      @game = Game.create(name: "Game1")
       puts "Game saved? #{@game.persisted?}"
       @gamelevel = GameLevel.create(level: 1, game: @game)
       puts "Game level saved? #{@gamelevel.persisted?}"

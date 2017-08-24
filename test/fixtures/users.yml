@@ -7,7 +7,6 @@ one:
   email: MyString
   avatar:
   username: MyString
-  exp_points: 1
   password: MyString
 
 two:
@@ -17,5 +16,4 @@ two:
   email: MyString
   avatar:
   username: MyString
-  exp_points: 1
   password: MyString
