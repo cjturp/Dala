@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'possible_answers/new'
+
   get 'exp_points/new'
 
   get 'questions/new'
