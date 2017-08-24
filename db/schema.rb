@@ -10,23 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823213727) do
+ActiveRecord::Schema.define(version: 20170824195257) do
 
-  create_table "exp_points", force: :cascade do |t|
-    t.integer "points"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "possible_answer_id"
-    t.index ["possible_answer_id"], name: "index_exp_points_on_possible_answer_id"
-    t.index ["user_id"], name: "index_exp_points_on_user_id"
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "game_levels", force: :cascade do |t|
     t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "game_id"
+    t.bigint "game_id"
     t.index ["game_id"], name: "index_game_levels_on_game_id"
   end
 
@@ -37,19 +30,14 @@ ActiveRecord::Schema.define(version: 20170823213727) do
     t.string "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_games_on_user_id"
   end
 
   create_table "possible_answers", force: :cascade do |t|
     t.string "answer"
     t.boolean "correct_ans"
-    t.integer "exp_points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "question_id"
-    t.integer "exp_point_id"
-    t.index ["exp_point_id"], name: "index_possible_answers_on_exp_point_id"
+    t.bigint "question_id"
     t.index ["question_id"], name: "index_possible_answers_on_question_id"
   end
 
@@ -59,8 +47,15 @@ ActiveRecord::Schema.define(version: 20170823213727) do
     t.string "subject"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "game_level_id"
+    t.bigint "game_level_id"
     t.index ["game_level_id"], name: "index_questions_on_game_level_id"
+  end
+
+  create_table "user_answers", force: :cascade do |t|
+    t.string "answer"
+    t.integer "exp_points"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,10 +65,12 @@ ActiveRecord::Schema.define(version: 20170823213727) do
     t.string "email"
     t.string "avatar"
     t.string "username"
-    t.integer "exp_points"
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "game_levels", "games"
+  add_foreign_key "possible_answers", "questions"
+  add_foreign_key "questions", "game_levels"
 end

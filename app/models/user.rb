@@ -1,7 +1,8 @@
 class User < ApplicationRecord
-  has_many :exp_points
-  has_many :games
-  # belongs_to :game
+  # has_many :exp_points
+ # belongs_to :game
+  has_one :user_answer
+  
   validates :name, presence: true
   validates :email, presence: true
 end
