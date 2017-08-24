@@ -1,5 +1,4 @@
 class ExpPoint < ApplicationRecord
-  has_many :possible_answers
-  belongs_to :possible_answer
+  belongs_to :possible_answer, foreign_key: :possible_answer_id
   belongs_to :user
 end
