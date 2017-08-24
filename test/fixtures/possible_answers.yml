@@ -3,9 +3,9 @@
 one:
   answer: MyString
   correct_ans: false
-  exp_points: 1
+  # exp_point: 1
 
 two:
   answer: MyString
   correct_ans: false
-  exp_points: 1
+  # exp_point: 1
