@@ -1,0 +1,11 @@
+h1  {
+  text-align: center;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}

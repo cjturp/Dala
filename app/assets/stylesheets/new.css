@@ -2,6 +2,7 @@ body {
   background-image: url("Dala-wallpaper.jpg");
   background-position: center;
   background-attachment: fixed;
+  font-family: fantasy;
 }
 
 header {
