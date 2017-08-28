@@ -13,7 +13,7 @@ two:
   name: MyString
   grade: 1
   school_name: MyString
-  email: MyString
+  email: MyString1
   avatar:
   username: MyString
   password: MyString

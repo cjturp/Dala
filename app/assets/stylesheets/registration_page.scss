@@ -1,0 +1,32 @@
+body {
+  background-image: url("Dala-wallpaper.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  font-family: passeo one;
+  padding-top: 10px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-horizontal {
+  text-align: center;
+}
+
+#legend{
+  font-weight: bold;
+}
+
+button {
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
