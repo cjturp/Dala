@@ -2,7 +2,7 @@ body {
   background-image: url("Dala-wallpaper.jpg");
   background-position: center;
   background-attachment: fixed;
-  font-family: passeo one;
+  font-family: "Passero One", "Lato";
   padding-top: 10px;
 }
 
@@ -24,9 +24,9 @@ textarea {
 
 button {
   background-color: Transparent;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     overflow: hidden;
     outline:none;
 }
