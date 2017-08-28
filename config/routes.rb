@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+
+resources :games, only: [ :index, :show ] do
+  resources :gamelevels, only: [ :index, :show], shallow: true
+end
+
+resources :users, only: [ :index] do
+
+end
+  root 'users#new'
+  get 'profile', to: 'users#new'
+
+  get 'signup', to: 'users#registration_page'
+
+  get 'play', to: 'game#new'
+
   get 'possible_answers/new'
 
   get 'questions/new'

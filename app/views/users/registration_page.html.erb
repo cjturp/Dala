@@ -61,6 +61,9 @@
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button class="btn btn-success">Register</button>
+        <button class="btn btn-success">
+        <%#= button_to "Register", games_path, method: :get %>
+        <%= link_to 'Registration', games_path, class: 'button alt' %>
+        </button>
       </div>
     </div>
