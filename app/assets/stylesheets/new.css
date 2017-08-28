@@ -1,0 +1,30 @@
+body {
+  background-image: url("Dala-wallpaper.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Passero One";
+}
+
+header {
+  text-align: right;
+  right: 2%;
+}
+
+.welcome-homepage {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.homepage-sign-up {
+  text-align: center;
+  padding-top: 5%;
+}
+
+button {
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
