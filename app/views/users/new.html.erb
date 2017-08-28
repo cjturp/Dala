@@ -16,5 +16,9 @@
 </div>
 
 <div class="homepage-sign-up">
-  <button type="button" name="button"><h2>Sign Up!</h2></button>
+  <button type="button" name="button">
+  <%#= button_to "Register", games_path, method: :get %>
+  <%= link_to 'Sign Up!', signup_path, class: 'button alt' %>
+  </button>
+
 </div>
