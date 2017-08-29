@@ -1,6 +1,13 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
-<h1>Games</h1>
+<nav class="navbar navbar-light bg-light justify-content-between">
+<a class="navbar-brand" href="#">
+    <img src="Adventurer2.png" width="50" height="50" class="d-inline-block align-top" alt="">
+    Profile
+  </a>
+<a class="navbar-brand" href="#">Dala</a>
+</nav>
 
 <table>
   <thead>
@@ -10,6 +17,7 @@
   </thead>
 
   <tbody>
+
     <% @games.each do |game| %>
       <tr>
         <td><%#= link_to 'Show', game %></td>
@@ -21,5 +29,5 @@
 </table>
 
 <br>
-
+</div>
 <%#= link_to 'New Game', new_game_path %>
