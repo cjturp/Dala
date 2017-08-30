@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users
 resources :games, only: [ :index, :show ] do
   resources :gamelevels, only: [ :index, :show], shallow: true
 end
