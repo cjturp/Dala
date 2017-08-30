@@ -11,7 +11,7 @@ gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
-gem 'bcrypt'
+gem 'devise'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

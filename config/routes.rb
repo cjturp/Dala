@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
+  devise_for :users
 resources :games, only: [ :index, :show ] do
   resources :gamelevels, only: [ :index, :show], shallow: true
 end
@@ -8,7 +8,7 @@ end
 resources :users, only: [ :index] do
 
 end
-  root 'users#new'
+  root 'games#new'
   get 'profile', to: 'users#new'
 
   get 'signup', to: 'users#registration_page'
