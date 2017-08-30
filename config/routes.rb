@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
 resources :games, only: [ :index, :show ] do
   resources :gamelevels, only: [ :index, :show], shallow: true
 end
