@@ -1,8 +1,9 @@
-body {
+body.sessions.new {
   background-image: url("Dala-wallpaper.jpg");
   background-position: center;
   background-attachment: fixed;
   font-family: "Passero One", cursive;
+  text-align: center;
 }
 
 header {
@@ -10,10 +11,7 @@ header {
   right: 2%;
 }
 
-.welcome-homepage {
-  text-align: center;
-  padding-top: 5%;
-}
+
 
 .homepage-sign-up {
   text-align: center;
