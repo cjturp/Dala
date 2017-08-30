@@ -4,21 +4,6 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :grade %><br />
-    <%= f.text_field :grade, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :school_name %><br />
-    <%= f.text_field :school_name, autofocus: true %>
-  </div>
-
-  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
@@ -41,4 +26,4 @@
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<%= render "devise/shared/links" %>
