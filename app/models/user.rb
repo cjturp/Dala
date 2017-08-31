@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :user_answers
+
+  def
+    @user = User.where({
+      @
+
+
+      })
+  end
 end
