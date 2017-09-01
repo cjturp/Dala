@@ -21,16 +21,19 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-<p class="navbar-text d-block text-right mr-4 mt-1 mb-5">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link btn btn-warning' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link btn btn-danger'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link btn btn-info'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link btn btn-success'  %>
-<% end %>
-</p>
+<div class="d-block text-right mr-4 mt-1 mb-5">
+  <div class="pull-right">
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link btn btn-warning' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link btn btn-danger'  %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link btn btn-info'  %> |
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link btn btn-success'  %>
+    <% end %>
+  </div>
+</div>
+  
     <%= yield %>
 
 

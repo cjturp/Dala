@@ -42,3 +42,5 @@ class User < ApplicationRecord
     ).first.possible_answer.question.game_level.level||1
   end
 end
+
+# games_levels = {game_one: 4, game_two: 5}
