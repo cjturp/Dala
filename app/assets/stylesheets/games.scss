@@ -1,7 +1,56 @@
 // Place all the styles related to the Games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper{
+  padding-top: 3%;
+  padding-bottom: 8%;
+}
 
-body{
-  background-image: image-url("Dala-dashboard.jpg");
+body.games{
+  background-image: url("Dala-dashboard.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+// .container-fluid{
+//   padding-top: 10%;
+//   padding-bottom: 10%;
+// }
+
+.card-square.mdl-card {
+    width: 320px;
+    height: 320px;
+    // float: left;
+    margin: 1rem;
+    position: relative;
+  }
+
+  .card-square.mdl-card:hover {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+  }
+  .card-square > .mdl-card__title {
+     color: #fff;
+     background: #03a9f4;
+   }
+
+   .card-square > .mdl-card__accent {
+     background: #ff9800;
+   }
+
+   #top{
+     position: center;
+   }
+.games-cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#bottom{
+  position: center;
 }
