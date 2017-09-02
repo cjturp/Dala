@@ -9,8 +9,20 @@ class GamesController < ApplicationController
 
   # GET /games/1
   # GET /games/1.json
+
+
+
+
   def show
+    @user = current_user
+    # next_question
+    #
+    # @gamelevel = @game.game_levels
+    # @question = @gamelevel[1].questions
   end
+
+
+
 
   # GET /games/new
   def new

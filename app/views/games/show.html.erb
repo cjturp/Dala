@@ -1,6 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Game 1</h1>
-<%#byebug%>
-<%#= link_to 'Edit', edit_games_path(@game) %> |
+<h1><%= @game.name %></h1>
+<h2>Level: <%= @user.current_level(@game).level %></h2>
+
+<% @user.current_level(@game).questions.each do |q| %>
+  <h3>Question: <%= q.body %></h3>
+<% end %>
+<% @user.current_level(@game).questions.each do |pa| %>
+  <h3>Answers: <%= pa.body %></h3>
+  <% end %>
+ <%#= countdown Time.now + 2.hours %>
+
+<!-- <img src="https://barbelleblogdotcom.files.wordpress.com/2013/06/scary-monster-copy.jpg?w=900" alt="scary-monster"> -->
+
+
+
 <%= link_to 'Back', games_path %>

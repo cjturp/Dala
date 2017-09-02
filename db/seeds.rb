@@ -7,16 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-UserAnswer.destroy_all
+PossibleAnswer.destroy_all
+Question.destroy_all
+GameLevel.destroy_all
+Game.destroy_all
 
- new_users = User.create(name: Faker::Name.name, email: Faker::Internet.email, password: "password12")
+
+new_users = User.create(name: Faker::Name.name, email: Faker::Internet.email, password: "password12")
 
 
 new_game = Game.create(name: "new game", instructions: "Press button to play game", subject: "Math")
 
 
 new_gamelevel = GameLevel.create(level: 1, game: new_game)
-new_gamelevel = GameLevel.create(level: 2, game: new_game)
+new_gamelevels = GameLevel.create(level: 2, game: new_game)
 
 new_question = Question.create(title: "Q1", body: "What is 3 squared?", subject: "Math", game_level: new_gamelevel)
 
