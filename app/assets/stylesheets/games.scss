@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .wrapper{
-  padding-top: 3%;
-  padding-bottom: 8%;
+  // padding-top: 3%;
+  padding-bottom: 5%;
 }
 
 body.games{
@@ -15,17 +15,14 @@ body.games{
 
 }
 
-// .container-fluid{
-//   padding-top: 10%;
-//   padding-bottom: 10%;
-// }
 
 .card-square.mdl-card {
     width: 320px;
     height: 320px;
     // float: left;
     margin: 1rem;
-    position: relative;
+    // position: relative;
+
   }
 
   .card-square.mdl-card:hover {
@@ -33,11 +30,12 @@ body.games{
   }
   .card-square > .mdl-card__title {
      color: #fff;
-     background: #03a9f4;
+     background: grey;
    }
 
    .card-square > .mdl-card__accent {
-     background: #ff9800;
+    //  background: #ff9800;
+
    }
 
    #top{
@@ -48,9 +46,17 @@ body.games{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
+.image1{
+  max-height: 250px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: center;
+}
 
 #bottom{
   position: center;
+  padding-bottom: 10%;
 }
