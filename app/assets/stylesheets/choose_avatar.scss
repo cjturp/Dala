@@ -1,0 +1,42 @@
+.users.choose_avatar {
+  background-image: url("Dala-alternate-world.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Passero One", cursive;
+}
+
+// header {
+//   text-align: right;
+//   right: 2%;
+// }
+
+#header {
+  text-align: left;
+  padding-right: 80%;
+}
+
+#chav {
+  text-align: center;
+  padding-top: 5%;
+  // padding-left: 3%;
+}
+
+#av-button {
+  list-style: none;
+  padding-top: 1%;
+  padding-right: 3%;
+}
+
+// div {
+//   // padding-left: 2%;
+// }
+
+
+button {
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
