@@ -5,24 +5,31 @@
   font-family: "Passero One", cursive;
 }
 
-header {
-  text-align: right;
-  right: 2%;
+// header {
+//   text-align: right;
+//   right: 2%;
+// }
+
+#header {
+  text-align: left;
+  padding-right: 80%;
 }
 
-h1 {
+#chav {
   text-align: center;
-  padding-top: 3%;
-  padding-left: 3%;
+  padding-top: 5%;
+  // padding-left: 3%;
 }
 
-ul {
+#av-button {
   list-style: none;
+  padding-top: 1%;
+  padding-right: 3%;
 }
 
-div {
-  padding-left: 4%;
-}
+// div {
+//   // padding-left: 2%;
+// }
 
 
 button {

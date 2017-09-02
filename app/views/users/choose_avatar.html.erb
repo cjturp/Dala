@@ -1,13 +1,14 @@
-<link rel="stylesheet" href="choose_avatar.css">
- <header>
-   <h5 id="profile">Profile</h5>
-   <h5 id="logo">Dala</h5>
- </header>
+<link rel="stylesheet" href="choose_avatar.scss">
+ <!-- <header>
+  <div id="header">
+    <h5>Dala</h5>
+  </div>
+ </header> -->
 
- <h1>Choose Avatar</h1>
+ <h1 id="chav">Choose Avatar</h1>
 
- <div class="avatar-form">
-   <ul>
+ <div id="avatar-form">
+   <ul id="av-button">
     <%= button_to users_asign_avatar_path(image: '') do %>
       <%= image_tag('/images/Adventurer1.png', alt: 'Adventurer1.png')%>
       <%= image_tag('/images/Adventurer2.png', alt: 'Adventurer2.png')%>
