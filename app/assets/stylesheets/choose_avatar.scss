@@ -1,0 +1,29 @@
+.users.choose_avatar {
+  background-image: url("Dala-alternate-world.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Passero One", cursive;
+}
+
+header {
+  text-align: right;
+  right: 2%;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+
+button {
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
