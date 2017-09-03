@@ -9,3 +9,30 @@
   text-align: center;
   padding-top: 5%;
 }
+
+// .leader-header {
+//   im: left;
+//   padding-top: 2%;
+// }
+//
+//
+// .first-standing{
+//   height: 50px;
+//   text-align: right;
+// }
+// #first-standing-progress-bar {
+//   padding:15px;
+// }
+//
+// #second-standing-progress-bar {
+//   padding:15px;
+// }
+
+.image-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    margin: 0;
+  }
+}

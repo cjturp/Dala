@@ -1,54 +1,43 @@
 <link rel="stylesheet" href="leaderboard.scss">
+
 <h1 id="leaderboard-title">Leaderboard</h1>
+
+
 <div class="leader-header">
+  <div class="image-wrapper">
     <%= image_tag("Adventurer2.png", class: "user-Dala") %>
-    <%= image_tag("Poet2.png", class: "user-Dala") %>
-    <%= image_tag("Scientist2.png", class: "user-Dala") %>
-    <%= image_tag("Poet1.png", class: "user-Dala") %>
+    <div id ="first-standing-progress-bar" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%; font-size: xx-large;" >
+          Level 1: 80% Complete
+    </div>
   </div>
 
-
-
-
-
-
-
-  <div class="container">
-
-  <div class="first-standing">
-      <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%; font-size: xx-large;" >
-        Level 1: 80% Complete
-      </div>
+  <div class="image-wrapper">
+    <%= image_tag("Poet2.png", class: "user-Dala") %>
+    <div id="second-standing-progress-bar" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:70%; font-size: xx-large;">
+      Level 1: 70% Complete
     </div>
-  <p>
+  </div>
 
-  </p>
-  <div class="progress">
-      <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:70%; font-size: xx-large;">
-        Level 1: 70% Complete
-      </div>
-    </div>
-  <p>
-
-  </p>
-  <div class="progress">
+  <div class="image-wrapper">
+    <%= image_tag("Scientist2.png", class: "user-Dala") %>
     <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:60%; font-size: xx-large;">
       Level 1: 60% Complete
     </div>
   </div>
-  <p>
 
-  </p>
-  </div>
-
-  <div class="progress">
+  <div class="image-wrapper">
+    <%= image_tag("Poet1.png", class: "user-Dala") %>
     <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; font-size: xx-large;">
       Level 1: 50% Complete
     </div>
   </div>
-  <p>
+</div>
 
-  </p>
+
+
+
+
+
   </div>
 
   <script>
