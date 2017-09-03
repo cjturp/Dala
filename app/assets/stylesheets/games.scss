@@ -23,11 +23,11 @@ body.games{
     margin: 1rem;
     position: relative;
     &:nth-child(even){
-      background: linear-gradient(teal, blue);
+      background-image: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
       opacity: 0.9;
     }
     &:nth-child(odd){
-      background-image: linear-gradient(teal, blue);
+      background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
       opacity: 0.9;
     }
   }
