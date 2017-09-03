@@ -35,11 +35,18 @@ class User < ApplicationRecord
           question: :game_level
         }
     }
-    self.user_answers.where(
+    answers = self.user_answers.where(
       condition_hash
     ).includes(
       join_hash
-    ).first.possible_answer.question.game_level.level||1
+    ).order(:level)
+
+    if answers.exists?
+      level = answers.last.possible_answer.question.game_level
+    else
+      level = game.game_levels.first
+    end
+    level
   end
 end
 

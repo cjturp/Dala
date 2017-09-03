@@ -1,6 +1,52 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Game 1</h1>
-<%#byebug%>
-<%#= link_to 'Edit', edit_games_path(@game) %> |
+<h1><%= @game.name %></h1>
+<h2>Level: <%= @user.current_level(@game).level %></h2>
+
+<%# @user.current_level(@game).questions.limit(1).each_with_index do |q, index| %>
+
+  <h3>Question: <%= @question.body %></h3>
+    <%#= @question %>
+ <% @question.possible_answers.each_with_index do |pa, index| %>
+
+    <h3 id="answer" data-toggle="<%= pa.correct_ans ? 'modal' : nil %>" data-target="<%= pa.correct_ans ? "#pdfModal-#{index}" : nil %>">
+      Answers: <%= pa.answer %></h3>
+
+      <% if pa.correct_ans %>
+        <div id="<%= "pdfModal-#{index}" %>" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Correct Answer!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  <% end %>
+<%# end %>
+
+
+
+
+ <%#= countdown Time.now + 2.hours %>
+
+<!-- <img src="https://barbelleblogdotcom.files.wordpress.com/2013/06/scary-monster-copy.jpg?w=900" alt="scary-monster"> -->
+
+<% previous_question =  @user.current_level(@game).questions.where(["id < ?", @user.current_level(@game).questions[0].id]).last %>
+<%= previous_question %>
+<%# if previous_question.id = @question.id %>
+<%#= link_to "< Previous", game_path(@game, question_id: previous_question.id )%>
+<%#  end %>
+    <%#= @question.id%>
+    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
+<% if next_question.id != @question.id %>
+  <%= link_to "Next >", game_path(@game, question_id: next_question.id)%>
+<%  end %>
+
 <%= link_to 'Back', games_path %>

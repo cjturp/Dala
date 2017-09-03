@@ -9,8 +9,22 @@ class GamesController < ApplicationController
 
   # GET /games/1
   # GET /games/1.json
+
+
+
+
   def show
+    if params[:question_id].present?
+      @question = Question.find_by_id params[:question_id]
+    else
+      @question = current_user.current_level(@game).questions.limit(1).first
+    end
+    @user = current_user
+
   end
+
+
+
 
   # GET /games/new
   def new
