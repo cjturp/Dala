@@ -22,7 +22,14 @@ body.games{
     // float: left;
     margin: 1rem;
     position: relative;
-
+    &:nth-child(even){
+      background: linear-gradient(teal, blue);
+      opacity: 0.9;
+    }
+    &:nth-child(odd){
+      background-image: linear-gradient(teal, blue);
+      opacity: 0.9;
+    }
   }
 
   .card-square.mdl-card:hover {
@@ -30,7 +37,7 @@ body.games{
   }
   .card-square > .mdl-card__title {
      color: #fff;
-     background: #a9acba;
+    //  background: #a9acba;
    }
 
    .card-square > .mdl-card__accent {
