@@ -9,7 +9,9 @@ resources :users, only: [ :index] do
 
 end
   root 'games#new'
-  get 'profile', to: 'users#new'
+  get 'home_page', to: 'users#new'
+
+  get 'users/profile'
 
   get 'signup', to: 'users#registration_page'
 

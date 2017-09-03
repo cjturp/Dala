@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  def new
+  end
+  
   def choose_avatar
   end
 
