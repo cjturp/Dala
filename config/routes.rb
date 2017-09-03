@@ -27,6 +27,8 @@ end
 
   get 'users/new'
 
+  get 'users/leaderboard'
+
   get 'users/choose_avatar'
 
   post 'users/asign_avatar'
