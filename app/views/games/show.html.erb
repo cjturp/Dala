@@ -3,6 +3,20 @@
 <h1><%= @game.name %></h1>
 <h2>Level: <%= @user.current_level(@game).level %></h2>
 
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Instructions </button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Welcome to the land of ...</p>
+  </div>
+
+</div>
+
 <%# @user.current_level(@game).questions.limit(1).each_with_index do |q, index| %>
 
   <h3>Question: <%= @question.body %></h3>
@@ -30,7 +44,11 @@
       <% end %>
   <% end %>
 <%# end %>
-
+<div id ="container">
+    <div id ="animate">
+      <%= link_to image_tag("monster-1.png") %>
+    </div>
+</div>
 
 
 
