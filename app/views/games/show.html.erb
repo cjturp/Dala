@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/game_level.scss">
+
 <p id="notice"><%= notice %></p>
 
 <h1><%= @game.name %></h1>
@@ -32,7 +34,7 @@
 <%# end %>
 
 
-
+<%= link_to 'Back', root_path, class: 'btn btn-info' %>
 
  <%#= countdown Time.now + 2.hours %>
 
@@ -46,7 +48,5 @@
     <%#= @question.id%>
     <% next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
 <% if next_question.id != @question.id %>
-  <%= link_to "Next >", game_path(@game, question_id: next_question.id)%>
+  <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning' %>
 <%  end %>
-
-<%= link_to 'Back', root_path %>

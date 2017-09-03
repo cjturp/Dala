@@ -1,3 +1,11 @@
 // Place all the styles related to the GameLevel controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.games.show{
+  background-image: url("level-1.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
