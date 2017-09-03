@@ -5,11 +5,15 @@ class Game < ApplicationRecord
   validates :name, presence: true
 
   # def previous_question
-  #   Question.where(["id < ?", id]).last
+  #   Question[0].where(["id < ?", id]).last
   # end
   #
   # def next_question
-  #   Question.where(["id > ?", id]).first
+  #   current_user.current_level(self).questions.where(["id > ?", current_user.current_level(self).questions[0].id]).first
   # end
+
+  def nextone
+
+  end
 
 end
