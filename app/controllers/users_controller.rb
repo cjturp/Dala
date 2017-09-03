@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
   def new
   end
-  
+
   def choose_avatar
+  end
+
+  def leaderboard
   end
 
   def asign_avatar
