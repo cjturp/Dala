@@ -6,14 +6,14 @@
 <h2>Level: <%= @user.current_level(@game).level %></h2>
 
 <!-- Trigger/Open The Modal -->
-<button class= "btn btn-success" id="myBtn">Instructions </button>
+<button class= "btn btn-success" id="myBtn" data-toggle="modal" data-target="#myModal">Instructions </button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
     <p>Welcome to Dala! In a world invaded by evil monsters who seek to destroy human knowledge and civilization as we know it, an elite group of warriors will stand up to protect the world and prevent them from eradicating human knowledge and dominating all humans.
 
 Game Instructions:
