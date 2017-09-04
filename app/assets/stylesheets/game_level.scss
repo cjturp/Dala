@@ -8,9 +8,22 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: 2%;
+  // margin-left: 2%;
+  padding: 15px;
+  text-decoration: bold;
+  // color: #e7f0fd;
 }
 
+.question {
+  opacity: 1;
+  color: white;
+  background: #333;
+  display: inline;
+  padding: 15px;
+  /* margin: 38px; */
+  border-radius: 10px;
+  /* margin-top: 35px; */
+}
 
 #level1{
   position: relative;
@@ -84,6 +97,7 @@
     margin-right: auto;
     transition: 1s;
     &:hover {
+      margin-bottom: 40px;
       transform: scale(1.2) rotate(2deg)
     }
   }
@@ -99,6 +113,7 @@
   align-items: center;
   max-width: 90%;
   margin: 0 auto;
+  margin-top: 25px;
   h3{
     flex: 1;
     // max-width: 100px;

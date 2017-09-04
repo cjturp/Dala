@@ -35,7 +35,7 @@
 <%# @user.current_level(@game).questions.limit(1).each_with_index do |q, index| %>
 <div class="container-question">
 
-  <h2>Question: <%= @question.body %></h2>
+  <h2 class="question">Question: <%= @question.body %></h2>
     <%#= @question %>
   <div class="flex-answer-container">
     <% @question.possible_answers.each_with_index do |pa, index| %>
