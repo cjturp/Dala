@@ -19,18 +19,31 @@ new_users = User.create(name: Faker::Name.name, email: Faker::Internet.email, pa
 new_game = Game.create(name: "new game", instructions: "Press button to play game", subject: "Math")
 
 
-new_gamelevel = GameLevel.create(level: 1, game: new_game)
-new_gamelevels = GameLevel.create(level: 2, game: new_game)
+new_gamelevel = GameLevel.create(level: 1, game: new_game) # Game Level 1
 
-new_question1 = Question.create(title: "Q1", body: "What is 3 squared?", subject: "Math", game_level: new_gamelevel)
-new_question2 = Question.create(title: "Q2", body: "Where was napoleon born", subject: "Math", game_level: new_gamelevel)
+new_question1 = Question.create(title: "Newton and Gravity", body: "What is a formula for Newton's Laws of Motion?", subject: "Science", game_level: new_gamelevel) #Question 1
 
-new_panswer = PossibleAnswer.create(answer: "HH & TCOS", question: new_question1)
-new_panswer = PossibleAnswer.create(answer: "9", correct_ans: true, question: new_question1)
+new_panswer = PossibleAnswer.create(answer: "Force = Mass x Acceleration",explanation: " #Explanation: Newton's Second Law of Motion states that the force acting on any object is equal to its mass times its acceleration", correct_ans: true, question: new_question1) #Answer 1 (correct)
 
-new_panswer = PossibleAnswer.create(answer: "Italy", question: new_question2)
-new_panswer = PossibleAnswer.create(answer: "France", correct_ans: true, question: new_question2)
+new_panswer = PossibleAnswer.create(answer: "Energy = Mass x Speed of Light Squared", question: new_question1) #Answer 2
 
+new_panswer = PossibleAnswer.create(answer: "Pressure = Mass / Volume", question: new_question1) #Answer 3
+
+new_panswer = PossibleAnswer.create(answer: "Speed = Distance / Time",  question: new_question1) #Answer 4
+
+#Explanation: Newton's Second Law of Motion states that the force acting on any object is equal to its mass times its acceleration
+
+new_question2 = Question.create(title: "Speed", body: "What equals speed?", subject: "Science", game_level: new_gamelevel) #Question 2
+
+new_panswer = PossibleAnswer.create(answer: "Distance plus Time", question: new_question2) #Answer1
+
+new_panswer = PossibleAnswer.create(answer: "Time / Distance", question: new_question2) #Answer 2
+
+new_panswer = PossibleAnswer.create(answer: "Distance / Time", explanation: "#Explanation: Average speed equals the distance traveled over time spanned", correct_ans: true, question: new_question2) #Answer 3 (correct)
+
+new_panswer = PossibleAnswer.create(answer: "Pressure times Volume",  question: new_question2) #Answer 4
+
+#Explanation: Average speed equals the distance traveled over time spanned
 
 new_answers = new_users.user_answers.create(answer_id: new_panswer.id)
 
