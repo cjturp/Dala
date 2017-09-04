@@ -6,16 +6,29 @@
 <h2>Level: <%= @user.current_level(@game).level %></h2>
 
 <!-- Trigger/Open The Modal -->
-<button class= "btn btn-success" id="myBtn">Instructions </button>
+<button class= "btn btn-success" id="myBtn" data-toggle="modal" data-target="#myModal">Instructions </button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
+<<<<<<< HEAD
     <span class="close">&times;</span>
     <p>Welcome to the land of ...</p>
   </div>
+=======
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <p>Welcome to Dala! In a world invaded by evil monsters who seek to destroy human knowledge and civilization as we know it, an elite group of warriors will stand up to protect the world and prevent them from eradicating human knowledge and dominating all humans.
+
+Game Instructions:
+
+You will be facing a monster whose sole mission is to wipe out your brain and make you his servant!
+
+Your knowledge and human spirit is your weapon. Defeat the monster!
+
+A question will appear. If you select the correct answer, you will inflict damage on the monster on the monster. Otherwise, he wil attack you!
+>>>>>>> 881412410f222cbc4fcf3ba996ed8e4ad7f51461
 
 </div>
 
@@ -73,13 +86,20 @@
 
 <!-- <img src="https://barbelleblogdotcom.files.wordpress.com/2013/06/scary-monster-copy.jpg?w=900" alt="scary-monster"> -->
 
-<% previous_question =  @user.current_level(@game).questions.where(["id < ?", @user.current_level(@game).questions[0].id]).last %>
-<%= previous_question %>
+<%# previous_question =  @user.current_level(@game).questions.where(["id < ?", @user.current_level(@game).questions[0].id]).last %>
+<%#= previous_question %>
 <%# if previous_question.id = @question.id %>
 <%#= link_to "< Previous", game_path(@game, question_id: previous_question.id )%>
 <%#  end %>
     <%#= @question.id%>
+<<<<<<< HEAD
     <% next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
 <% if next_question.id != @question.id %>
   <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %>
+=======
+    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @current_question_id]) %>
+<% if next_question.any? && next_question.first.id <= next_question.last.id %>
+  <% next_question = next_question.first%>
+  <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning' %>
+>>>>>>> 881412410f222cbc4fcf3ba996ed8e4ad7f51461
 <%  end %>
