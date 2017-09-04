@@ -16,7 +16,7 @@ Game.destroy_all
 new_users = User.create(name: Faker::Name.name, email: Faker::Internet.email, password: "password12")
 
 
-new_game = Game.create(name: "%th grade Physics!", instructions: "Press button to play game", subject: "Math")
+new_game = Game.create(name: "5th grade Physics!", instructions: "Press button to play game", subject: "Math")
 
 
 new_gamelevel = GameLevel.create(level: 1, game: new_game) # Game Level 1
