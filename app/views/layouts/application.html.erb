@@ -14,7 +14,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="<%= controller_name %> <%= controller.action_name %>">
+  <body id="level-<%= @gamelevel %> "class="<%= controller_name %> <%= controller.action_name %>">
     <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
