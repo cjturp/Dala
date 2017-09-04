@@ -16,8 +16,10 @@ class GamesController < ApplicationController
   def show
     if params[:question_id].present?
       @question = Question.find_by_id params[:question_id]
+      @current_question_id = params[:question_id]
     else
       @question = current_user.current_level(@game).questions.limit(1).first
+      @current_question_id = @question.id
     end
     @user = current_user
 

@@ -72,13 +72,14 @@ You will gain experience after each battle and eventually you will be able to up
 
 <!-- <img src="https://barbelleblogdotcom.files.wordpress.com/2013/06/scary-monster-copy.jpg?w=900" alt="scary-monster"> -->
 
-<% previous_question =  @user.current_level(@game).questions.where(["id < ?", @user.current_level(@game).questions[0].id]).last %>
-<%= previous_question %>
+<%# previous_question =  @user.current_level(@game).questions.where(["id < ?", @user.current_level(@game).questions[0].id]).last %>
+<%#= previous_question %>
 <%# if previous_question.id = @question.id %>
 <%#= link_to "< Previous", game_path(@game, question_id: previous_question.id )%>
 <%#  end %>
     <%#= @question.id%>
-    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
-<% if next_question.id != @question.id %>
+    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @current_question_id]) %>
+<% if next_question.any? && next_question.first.id <= next_question.last.id %>
+  <% next_question = next_question.first%>
   <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning' %>
 <%  end %>
