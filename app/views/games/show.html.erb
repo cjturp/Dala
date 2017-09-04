@@ -2,8 +2,12 @@
 
 <p id="notice"><%= notice %></p>
 
+<div class="gamelevel-<%= @gamelevel.id %>">
+
 <h1><%= @game.name %></h1>
 <h2>Level: <%= @user.current_level(@game).level %></h2>
+</div>
+
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -114,6 +118,6 @@
 
 <% if next_question.any? && next_question.first.id <= next_question.last.id %>
   <% next_question = next_question.first%>
-  <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning' %>
+  <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %>
 
 <%  end %>
