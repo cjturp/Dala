@@ -8,6 +8,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 
@@ -70,4 +71,23 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#animateMonster{
+  // padding-bottom: 135px;
+  // height: 10px;
+  // width: 10px;
+  img {
+    max-height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    &:hover {
+      transform: scale(1.2) rotate(2deg)
+    }
+  }
+}
+.container-question{
+  text-align: center;
 }
