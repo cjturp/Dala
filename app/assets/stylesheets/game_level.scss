@@ -55,7 +55,7 @@ text-decoration: bold;
   opacity: 1;
   color: white;
   background: #333;
-  display: inline;
+  display: inline-flex;
   padding: 15px;
   /* margin: 38px; */
   border-radius: 10px;
@@ -89,7 +89,7 @@ text-decoration: bold;
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    // z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -163,7 +163,9 @@ text-decoration: bold;
 #buttons{
   margin-top: 35px;
 }
-
+#button{
+  margin-left: 8px;
+}
 .progress-bar-vertical {
   margin-top: 40px;
   width: 20px;

@@ -178,7 +178,7 @@ new_panswer = PossibleAnswer.create(answer: "Kinetic Change", question: new_ques
 
 #Explanation: A change in matter that does not change the matter’s composition or create an entirely new kind of matter is a physical change. An example of this can be when a candle melts. The candle changes form but does not become something else entirely.
 
-new_question12 = Question.create(title: "Energy and Height", body: "As heigh increases, so does what type of energy?", subject: "Science", game_level: new_gamelevel3) #Question 2
+new_question12 = Question.create(title: "Energy and Height", body: "As height increases, so does what type of energy?", subject: "Science", game_level: new_gamelevel3) #Question 2
 
 new_panswer = PossibleAnswer.create(answer: "Kinetic Energy", question: new_question12)
 
@@ -268,16 +268,16 @@ new_panswer = PossibleAnswer.create(answer: "When a gas turns into a liquid",exp
 
 new_gamelevel4 = GameLevel.create(level: 4, game: new_game) # Game Level 4
 
-new_question18 = Question.create(title: "Newton and Gravity", body: "What is a formula for Newton's Laws of Motion?", subject: "Science", game_level: new_gamelevel4) #Question 1
-
-new_panswer = PossibleAnswer.create(answer: "Force = Mass x Acceleration",explanation:"#Explanation: Newton's Second Law of Motion states that the force acting on any object is equal to its mass times its acceleration
-", correct_ans: true, question: new_question18) #Answer 1 (correct)
-
-new_panswer = PossibleAnswer.create(answer: "Energy = Mass x Speed of Light Squared", question: new_question18) #Answer 2
-
-new_panswer = PossibleAnswer.create(answer: "Pressure = Mass / Volume", question: new_question18) #Answer 3
-
-new_panswer = PossibleAnswer.create(answer: "Speed = Distance / Time", question: new_question18) #Answer 4
+# new_question21 = Question.create(title: "Newton and Gravity", body: "What is a formula for Newton's Laws of Motion?", subject: "Science", game_level: new_gamelevel4) #Question 1
+#
+# new_panswer = PossibleAnswer.create(answer: "Force = Mass x Acceleration",explanation:"#Explanation: Newton's Second Law of Motion states that the force acting on any object is equal to its mass times its acceleration
+# ", correct_ans: true, question: new_question21) #Answer 1 (correct)
+#
+# new_panswer = PossibleAnswer.create(answer: "Energy = Mass x Speed of Light Squared", question: new_question21) #Answer 2
+#
+# new_panswer = PossibleAnswer.create(answer: "Pressure = Mass / Volume", question: new_question21) #Answer 3
+#
+# new_panswer = PossibleAnswer.create(answer: "Speed = Distance / Time", question: new_question21) #Answer 4
 
 #Explanation: Newton's Second Law of Motion states that the force acting on any object is equal to its mass times its acceleration
 new_question19 = Question.create(title: "Momentum", body: "Momentum is equal to:", subject: "Science", game_level: new_gamelevel4) #Question 2
@@ -308,18 +308,18 @@ new_panswer = PossibleAnswer.create(answer: "When a gas turns into a liquid",exp
 
 #Explanation: When a gas is condensed - such as when the surface of your Coke has droplets and becomes wet - it becomes liquid.
 
-new_question21 = Question.create(title: "Floaties", body: "Items that float have a property called:", subject: "Science", game_level: new_gamelevel4) #Question 4
+new_question18 = Question.create(title: "Floaties", body: "Items that float have a property called:", subject: "Science", game_level: new_gamelevel4) #Question 4
 
-new_panswer = PossibleAnswer.create(answer: "Weight", question: new_question21)
+new_panswer = PossibleAnswer.create(answer: "Weight", question: new_question18)
 
 new_panswer = PossibleAnswer.create(answer: "Buoyancy",explanation:"#Explanation: Buoyancy describes an object’s tendency to float in water or other fluids.
-", correct_ans: true, question: new_question21)
+", correct_ans: true, question: new_question18)
 
-new_panswer = PossibleAnswer.create(answer: "Height", question: new_question21)
+new_panswer = PossibleAnswer.create(answer: "Height", question: new_question18)
 
-new_panswer = PossibleAnswer.create(answer: "Flexibility", question: new_question21)
+new_panswer = PossibleAnswer.create(answer: "Flexibility", question: new_question18)
 
-new_panswer = PossibleAnswer.create(answer: "Floatie", question: new_question21)
+new_panswer = PossibleAnswer.create(answer: "Floatie", question: new_question18)
 
 #Explanation: Buoyancy describes an object’s tendency to float in water or other fluids.
 

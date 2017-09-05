@@ -53,7 +53,7 @@
  <% @question.possible_answers.each_with_index do |pa, index| %>
 
     <h3 id="answer" data-toggle="<%= pa.correct_ans ? 'modal' : nil %>" data-target="<%= pa.correct_ans ? "#pdfModal-#{index}" : nil %>">
-      Answers: <%= pa.answer %></h3>
+      <%= pa.answer %></h3>
 
       <% if pa.correct_ans %>
         <div id="<%= "pdfModal-#{index}" %>" class="modal fade" role="dialog">
