@@ -3,36 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .game_level.show{
-  .gamelevel-5{
-    background-image: url("level-1.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    // margin-left: 2%;
-    padding: 15px;
-    text-decoration: bold;
-  }
-  .gamelevel-6{
-    background-image: url("level-2.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    // margin-left: 2%;
-    padding: 15px;
-    text-decoration: bold;
-  }
-  .gamelevel-7{
-  background-image: url("level-3.jpg");
+  background-image: url("level-1.jpg");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  // margin-left: 2%;
   padding: 15px;
   text-decoration: bold;
-  // color: #e7f0fd;
+}
+
+.gamelevel-5{
+  background-image: url("level-1.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  text-decoration: bold;
+}
+.gamelevel-6{
+  background-image: url("level-2.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  text-decoration: bold;
+}
+.gamelevel-7{
+background-image: url("level-3.jpg");
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+padding: 15px;
+text-decoration: bold;
+// color: #e7f0fd;
 }
 .gamelevel-8{
   background-image: url("level-4.jpg");
@@ -40,11 +46,9 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  // margin-left: 2%;
   padding: 15px;
   text-decoration: bold;
-}
-}
+  }
 
 .question {
   opacity: 1;

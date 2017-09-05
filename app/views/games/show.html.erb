@@ -25,7 +25,7 @@
 
     Your knowledge and human spirit is your weapon. Defeat the monster!
 
-    A question will appear. If you select the correct answer, you will inflict damage on the monster on the monster. Otherwise, he wil attack you!</p>
+    A question will appear. If you select the correct answer, you will inflict damage on the monster. Otherwise, he wil attack you!</p>
       </div>
     </div>
   </div>
@@ -109,15 +109,13 @@
 <%#= link_to "< Previous", game_path(@game, question_id: previous_question.id )%>
 <%#  end %>
     <%#= @question.id%>
-
-    <!-- <%# next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
-<%# if next_question.id != @question.id %>
-  <%#= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %> -->
-
     <% next_question =  @user.current_level(@game).questions.where(["id > ?", @current_question_id]) %>
+    <% if next_question.any? && next_question.first.id <= next_question.last.id %>
+      <% next_question = next_question.first%>
+      <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %>
+    <%  end %>
 
-<% if next_question.any? && next_question.first.id <= next_question.last.id %>
-  <% next_question = next_question.first%>
+    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
+<% if next_question.id != @question.id %>
   <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %>
-
-<%  end %>
+<% end %>

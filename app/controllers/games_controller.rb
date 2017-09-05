@@ -10,10 +10,11 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
 
-
-
-
   def show
+    @games = Game.find(3)
+    @gamelevel = GameLevel.find(params[:id])
+    @question = @question.gamelevels
+
     if params[:question_id].present?
       @question = Question.find_by_id params[:question_id]
       @current_question_id = params[:question_id]
