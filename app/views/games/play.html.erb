@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="/game_level.scss">
+
+<p id="notice"><%= notice %></p>
+<%= @game.game_levels.each do |dog|%>
+<!-- <div class="gamelevel-<%= dog.level %>"> -->
+  <% end %>
+<h1><%= @game.name %></h1>
+<h2>Level: <%= @user.current_level(@game).level %></h2>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to Dala! In a world invaded by evil monsters who seek to destroy human knowledge and civilization as we know it, an elite group of warriors will stand up to protect the world and prevent them from eradicating human knowledge and dominating all humans.
+
+    Game Instructions:
+
+    You will be facing a monster whose sole mission is to wipe out your brain and make you his servant!
+
+    Your knowledge and human spirit is your weapon. Defeat the monster!
+
+    A question will appear. If you select the correct answer, you will inflict damage on the monster on the monster. Otherwise, he wil attack you!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Trigger/Open The Modal -->
+<button class= "btn btn-success" id="myBtn" data-toggle="modal" data-target="#myModal">Instructions </button>
+
+
+<div class="progress progress-bar-vertical">
+  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 60%;">
+    <span class="sr-only">60% Complete</span>
+  </div>
+</div>
+
+
+<div class="container" >
+    <div id ="animateMonster">
+      <%= link_to image_tag("monster-1.png"), class: "img-responsive character-img" %>
+    </div>
+</div>
+
+<%# @user.current_level(@game).questions.limit(1).each_with_index do |q, index| %>
+<div class="container-question">
+
+  <h2 class="question">Question: <%= @question.body %></h2>
+    <%#= @question %>
+  <div class="flex-answer-container">
+    <% @question.possible_answers.each_with_index do |pa, index| %>
+    <h3 id="answer" data-toggle="modal" data-target="#pdfModal-<%= index %>">
+      <%= pa.answer %></h3>
+
+      <% if pa.correct_ans %>
+        <div id="<%= "pdfModal-#{index}" %>" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Correct Answer!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div id="<%= "pdfModal-#{index}" %>" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Incorrect Answer!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+  <% end %>
+<%# end %>
+</div>
+</div>
+
+</div>
+
+
+<%= link_to 'Back', root_path, class: 'btn btn-info', id: 'buttons' %>
+
+ <%#= countdown Time.now + 2.hours %>
+
+<!-- <img src="https://barbelleblogdotcom.files.wordpress.com/2013/06/scary-monster-copy.jpg?w=900" alt="scary-monster"> -->
+
+<%# previous_question =  @user.current_level(@game).questions.where(["id < ?", @user.current_level(@game).questions[0].id]).last %>
+<%#= previous_question %>
+<%# if previous_question.id = @question.id %>
+<%#= link_to "< Previous", game_path(@game, question_id: previous_question.id )%>
+<%#  end %>
+    <%#= @question.id%>
+
+    <!-- <%# next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
+<%# if next_question.id != @question.id %>
+  <%#= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %> -->
+
+    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @current_question_id]) %>
+
+<% if next_question.any? && next_question.first.id <= next_question.last.id %>
+  <% next_question = next_question.first%>
+  <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning' %>
+
+<%  end %>
+<!-- </div> -->

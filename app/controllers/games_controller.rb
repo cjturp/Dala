@@ -14,6 +14,7 @@ class GamesController < ApplicationController
 
 
   def show
+    @game = Game.find_by_name("Physics")
     if params[:question_id].present?
       @question = Question.find_by_id params[:question_id]
       @current_question_id = params[:question_id]
@@ -24,7 +25,53 @@ class GamesController < ApplicationController
     @user = current_user
 
   end
+  def level1
+    @game = Game.find_by_name("Physics")
+    if params[:question_id].present?
+      @question = Question.find_by_id params[:question_id]
+      @current_question_id = params[:question_id]
+    else
+      @question = GameLevel.find_by_level(1).questions.limit(1).first
+      @current_question_id = @question.id
+    end
+    @user = current_user
+  end
 
+  def level2
+    @game = Game.find_by_name("Physics")
+    if params[:question_id].present?
+      @question = Question.find_by_id params[:question_id]
+      @current_question_id = params[:question_id]
+    else
+      @question = GameLevel.find_by_level(2).questions.limit(1).first
+      @current_question_id = @question.id
+    end
+    @user = current_user
+  end
+
+  def level3
+    @game = Game.find_by_name("Physics")
+    if params[:question_id].present?
+      @question = Question.find_by_id params[:question_id]
+      @current_question_id = params[:question_id]
+    else
+      @question = GameLevel.find_by_level(3).questions.limit(1).first
+      @current_question_id = @question.id
+    end
+    @user = current_user
+  end
+
+  def level4
+    @game = Game.find_by_name("Physics")
+    if params[:question_id].present?
+      @question = Question.find_by_id params[:question_id]
+      @current_question_id = params[:question_id]
+    else
+      @question = GameLevel.find_by_level(4).questions.limit(1).first
+      @current_question_id = @question.id
+    end
+    @user = current_user
+  end
 
 
 
