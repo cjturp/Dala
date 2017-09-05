@@ -1,14 +1,11 @@
 <link rel="stylesheet" href="/game_level.scss">
 
 <p id="notice"><%= notice %></p>
-
-<div class="gamelevel-<%= @gamelevel.id %>">
-
+<%= @game.game_levels.each do |dog|%>
+<!-- <div class="gamelevel-<%= dog.level %>"> -->
+  <% end %>
 <h1><%= @game.name %></h1>
-
-<h2>Level: <%= GameLevel.find_by_level(1).level %></h2>
-
-
+<h2>Level: <%= @user.current_level(@game).level %></h2>
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -26,7 +23,7 @@
 
     Your knowledge and human spirit is your weapon. Defeat the monster!
 
-    A question will appear. If you select the correct answer, you will inflict damage on the monster. Otherwise, he wil attack you!</p>
+    A question will appear. If you select the correct answer, you will inflict damage on the monster on the monster. Otherwise, he wil attack you!</p>
       </div>
     </div>
   </div>
@@ -110,13 +107,16 @@
 <%#= link_to "< Previous", game_path(@game, question_id: previous_question.id )%>
 <%#  end %>
     <%#= @question.id%>
-    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @current_question_id]) %>
-    <% if next_question.any? && next_question.first.id <= next_question.last.id %>
-      <% next_question = next_question.first%>
-      <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %>
-    <%  end %>
 
-    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
-<% if next_question.id != @question.id %>
-  <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %>
-<% end %>
+    <!-- <%# next_question =  @user.current_level(@game).questions.where(["id > ?", @user.current_level(@game).questions[0].id]).first %>
+<%# if next_question.id != @question.id %>
+  <%#= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning', id: 'buttons' %> -->
+
+    <% next_question =  @user.current_level(@game).questions.where(["id > ?", @current_question_id]) %>
+
+<% if next_question.any? && next_question.first.id <= next_question.last.id %>
+  <% next_question = next_question.first%>
+  <%= link_to "Next >", game_path(@game, question_id: next_question.id), class: 'btn btn-warning' %>
+
+<%  end %>
+<!-- </div> -->

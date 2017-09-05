@@ -2,17 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.game_level.show{
-  background-image: url("level-1.jpg");
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 15px;
-  text-decoration: bold;
-}
+// .game_level.show{
+//   // background-image: url("level-1.jpg");
+//   // background-position: center;
+//   // background-attachment: fixed;
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   // padding: 15px;
+//   // text-decoration: bold;
+//   // color: #e7f0fd;
+// }
 
-.gamelevel-5{
+.games.level1{
   background-image: url("level-1.jpg");
   background-position: center;
   background-attachment: fixed;
@@ -21,7 +22,7 @@
   padding: 15px;
   text-decoration: bold;
 }
-.gamelevel-6{
+.games.level2{
   background-image: url("level-2.jpg");
   background-position: center;
   background-attachment: fixed;
@@ -30,7 +31,7 @@
   padding: 15px;
   text-decoration: bold;
 }
-.gamelevel-7{
+.games.level3{
 background-image: url("level-3.jpg");
 background-position: center;
 background-attachment: fixed;
@@ -38,9 +39,9 @@ background-repeat: no-repeat;
 background-size: cover;
 padding: 15px;
 text-decoration: bold;
-// color: #e7f0fd;
+
 }
-.gamelevel-8{
+.games.level4{
   background-image: url("level-4.jpg");
   background-position: center;
   background-attachment: fixed;
@@ -160,7 +161,7 @@ text-decoration: bold;
   }
 }
 #buttons{
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 .progress-bar-vertical {

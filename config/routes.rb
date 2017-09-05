@@ -12,6 +12,12 @@ end
   get 'home_page', to: 'users#new'
 
   get 'users/profile'
+  get 'game/level1', to: 'games#level1'
+
+  get 'game/level2', to: 'games#level2'
+
+  get 'game/level3', to: 'games#level3'
+  get 'game/level4', to: 'games#level4'
 
   get 'signup', to: 'users#registration_page'
 
