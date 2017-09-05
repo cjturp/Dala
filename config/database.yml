@@ -20,6 +20,6 @@ test:
   <<: *default
   database: test-dala
 
-production:
-  <<: *default
-  database: production-dala
+# production:
+#   <<: *default
+#   database: production-dala
